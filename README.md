@@ -42,7 +42,7 @@ class ConfusionMatrix:
             are not supported yet.
         - We don't deal with division by 0.
         """
-        self.cm = cm
+        self.cm = np.array(cm)
     
     def accuracy_score(self):
         return self.cm.diagonal().sum() / self.cm.sum()
